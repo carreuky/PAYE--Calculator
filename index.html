@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,81 +8,181 @@
     <link rel="stylesheet" href="./assest/style.css">
     <title>PAYE Calculator</title>
 </head>
+
 <body>
-    <section class="salary">
-        <div class="row">
-            <div class="text">
-                PAY PERIOD :
-            </div>
-            <form action="">
-                <input type="checkbox" name="my-input" id="year">
-                <label for="month">MONTH</label>
+    <section class="salary-output">
+        <section class="salary">
+            <div class="row">
+                <div class="text">
+                    PAY PERIOD :
+                </div>
+                <form action="">
+                    <input type="checkbox" name="my-input" id="year">
+                    <label for="month">MONTH</label>
 
-                <input type="checkbox" name="my-input" id="month">
-                <label for="year">YEAR</label>
-            </form>
-        </div>
-        <div class="row">
-            <div class="text">
-                BASIC SALARY :
+                    <input type="checkbox" name="my-input" id="month">
+                    <label for="year">YEAR</label>
+                </form>
             </div>
-            <div class="salaryKSH">
-                <input type="text" name="my-input" id="ksh">
-                <label for="ksh">Ksh</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="text">
-                BENEFITS(BONUS ALLOWANCE) :
-            </div>
-            <div class="salaryKSH">
-                <input  type="text" name="my-input" id="ksh">
-                <label for="ksh">Ksh</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="text">
-                DEDUCT NHIF
-            </div>
-            <form action="">
-                <input type="checkbox" name="my-input" id="yes">
-                <label for="month">YES</label>
-
-                <input type="checkbox" name="my-input" id="no">
-                <label for="year">NO</label>
-            </form>
-        </div>
-        <div class="row">
-            <div class="text">
-                NSSF RATES
-            </div>
-            <div>
-            <div>
-                <input type="checkbox" name="my-input" id="newnssf">
-                <label for="newnssf">NEW NSSF RATES (TIERED)</label></div>
-                <div>
-                    <input type="checkbox" name="my-input" id="oldnssf">
-                    <label for="year">OLD NSSF RATES (KSH200)</label>
+            <div class="row">
+                <div class="text">
+                    BASIC SALARY :
+                </div>
+                <div class="salaryKSH">
+                    <input type="text" name="my-input" id="ksh">
+                    <label for="ksh">Ksh</label>
                 </div>
             </div>
-                
-        </div>
-        <div class="row">
-            <div class="text">
-                DEDUCT NSSF :
+            <div class="row">
+                <div class="text">
+                    BENEFITS(BONUS ALLOWANCE) :
+                </div>
+                <div class="salaryKSH">
+                    <input type="text" name="my-input" id="ksh">
+                    <label for="ksh">Ksh</label>
+                </div>
             </div>
-            <form action="">
-                <input type="checkbox" name="my-input" id="yesnhif">
-                <label for="month">YES</label>
+            <div class="row">
+                <div class="text">
+                    DEDUCT NHIF
+                </div>
+                <form action="">
+                    <input type="checkbox" name="my-input" id="yes">
+                    <label for="month">YES</label>
 
-                <input type="checkbox" name="my-input" id="nonhif">
-                <label for="year">NO</label>
-            </form>
-        </div>
-        <button id="button">
-            Calculate
-        </button>
+                    <input type="checkbox" name="my-input" id="no">
+                    <label for="year">NO</label>
+                </form>
+            </div>
+            <div class="row">
+                <div class="text">
+                    NSSF RATES
+                </div>
+                <div>
+                    <div>
+                        <input type="checkbox" name="my-input" id="newnssf">
+                        <label for="newnssf">NEW NSSF RATES (TIERED)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="my-input" id="oldnssf">
+                        <label for="year">OLD NSSF RATES (KSH200)</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="text">
+                    DEDUCT NSSF :
+                </div>
+                <form action="">
+                    <input type="checkbox" name="my-input" id="yesnhif">
+                    <label for="month">YES</label>
+
+                    <input type="checkbox" name="my-input" id="nonhif">
+                    <label for="year">NO</label>
+                </form>
+            </div>
+            <button id="button">
+                Calculate
+            </button>
+        </section>
+        <section class="output">
+            <div class="row-output">
+                <div class="column-1">
+                    INCOME BEFORE PENSION DEDUCTION
+                </div>
+                <div class="column-2">
+                </div>
+
+            </div>
+            <div class="row-output">
+                <div class="column-1">
+                    DEDUCTIBLE NSSF PENSION CONTRIBUTION
+                </div>
+                <div class="column-2">
+
+                </div>
+            </div>
+            <div class="row-output">
+                <div class="column-1">
+                    INCOME AFTER PENSION DEDUCTIONS
+                </div>
+                <div class="column-2">
+
+                </div>
+            </div>
+            <div class="row-output">
+                <div class="column-1">
+                    BENEFITS IN KIND
+                </div>
+                <div class="column-2">
+                </div>
+            </div>
+            <div class="row-output">
+                <div class="column-1">
+                    TAXABLE INCOME
+                </div>
+                <div class="column-2">
+
+                </div>
+            </div>
+            <div class="row-output">
+                <div class="column-1">
+                    TAX ON TAXABLE INCOME
+                </div>
+                <div class="column-2">
+
+                </div>
+            </div>
+            <div class="row-output">
+                <div class="column-1">
+                    PERSONAL RELIEF
+                </div>
+                <div class="column-2">
+
+                </div>
+            </div>
+            <div class="row-output">
+                <div class="column-1">
+                    TAX NET OFF RELIEF
+                </div>
+                <div class="column-2">
+
+                </div>
+            </div>
+            <div class="row-output">
+                <div class="column-1">
+                    PAYE
+                </div>
+                <div class="column-2">
+
+                </div>
+            </div>
+            <div class="row-output">
+                <div class="column-1">
+                    CHARGEABLE INCOME
+                </div>
+                <div class="column-2">
+
+                </div>
+            </div>
+            <div class="row-output">
+                <div class="column-1">
+                    NHIF CONTRIBUTION
+                </div>
+                <div class="column-2">
+
+                </div>
+            </div>
+            <div class="row-output">
+                <div class="column-1">
+                    NET 
+                </div>
+                <div class="column-2">
+            </div>
+        </section>
     </section>
     <script src="./assest/style.css"></script>
 </body>
+
 </html>
