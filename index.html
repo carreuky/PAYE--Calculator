@@ -14,10 +14,10 @@
                 PAY PERIOD :
             </div>
             <form action="">
-                <input type="checkbox" name="my-input" id="yes">
+                <input type="checkbox" name="my-input" id="year">
                 <label for="month">MONTH</label>
 
-                <input type="checkbox" name="my-input" id="no">
+                <input type="checkbox" name="my-input" id="month">
                 <label for="year">YEAR</label>
             </form>
         </div>
@@ -25,27 +25,62 @@
             <div class="text">
                 BASIC SALARY :
             </div>
+            <div class="salaryKSH">
+                <input type="text" name="my-input" id="ksh">
+                <label for="ksh">Ksh</label>
+            </div>
         </div>
         <div class="row">
             <div class="text">
                 BENEFITS(BONUS ALLOWANCE) :
+            </div>
+            <div class="salaryKSH">
+                <input  type="text" name="my-input" id="ksh">
+                <label for="ksh">Ksh</label>
             </div>
         </div>
         <div class="row">
             <div class="text">
                 DEDUCT NHIF
             </div>
+            <form action="">
+                <input type="checkbox" name="my-input" id="yes">
+                <label for="month">YES</label>
+
+                <input type="checkbox" name="my-input" id="no">
+                <label for="year">NO</label>
+            </form>
         </div>
         <div class="row">
             <div class="text">
                 NSSF RATES
             </div>
+            <div>
+            <div>
+                <input type="checkbox" name="my-input" id="newnssf">
+                <label for="newnssf">NEW NSSF RATES (TIERED)</label></div>
+                <div>
+                    <input type="checkbox" name="my-input" id="oldnssf">
+                    <label for="year">OLD NSSF RATES (KSH200)</label>
+                </div>
+            </div>
+                
         </div>
         <div class="row">
             <div class="text">
                 DEDUCT NSSF :
             </div>
+            <form action="">
+                <input type="checkbox" name="my-input" id="yesnhif">
+                <label for="month">YES</label>
+
+                <input type="checkbox" name="my-input" id="nonhif">
+                <label for="year">NO</label>
+            </form>
         </div>
+        <button id="button">
+            Calculate
+        </button>
     </section>
     <script src="./assest/style.css"></script>
 </body>

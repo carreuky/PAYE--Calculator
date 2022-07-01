@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+body, button{
+    font-family: 'Nunito Sans';
+    font-weight: bolder;
+}
+    
+.salary{
+padding: 30px 30px 30px;
+padding-bottom: 30px;
+background: wheat;
+border-radius: 5px;
+width: 450px;
+}
+.row{
+display: grid;
+  grid-template-columns: 200px 230px ;
+  height: 60px;
+}
+.text{
+}
+#ksh{
+width:100px; 
+height:25px;
+}
+#button{
+    margin-left: 40px;
+    padding: 8px 100px;
+    background: whitesmoke;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
