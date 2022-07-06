@@ -19,6 +19,7 @@ display: grid;
   height: 60px;
 }
 .text{
+
 }
 #ksh{
 width:100px; 
@@ -57,7 +58,12 @@ height:25px;
 .column-2{
     border-left: 1px solid black;
 }
+.column-2 > p {
+    padding-left: 15px;
+    font-weight: bolder;
+    color: black;
 
+}
 
 
 
