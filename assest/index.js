@@ -191,4 +191,10 @@ const nsff=()=>{
     
         // }
         
-    } 
+    }
+    const taxonRelief=()=>{
+        minusrelief=parseFloat( taxPayed.textContent-relief.textContent)
+        taxreleif.textContent=minusrelief.toFixed(2)
+        paye.textContent=minusrelief.toFixed(2)
+        
+        }
