@@ -127,3 +127,17 @@ const nsff=()=>{
         let pensioned=parseInt(income.textContent-nssfout.textContent)
         incomePensioned.textContent=pensioned
     }
+
+    // benefits + salary
+
+    const totalIncome = () => {
+
+        let total;
+        if (kshbonus.value !== '' && salary.value !== '') {
+            total = parseInt(salary.value) + parseInt(kshbonus.value);
+            income.textContent = total;
+        }else if (kshbonus.value === ''){
+            total = parseInt(salary.value);
+            income.textContent =parseInt(total);
+        }
+    }
