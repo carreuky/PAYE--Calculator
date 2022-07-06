@@ -198,3 +198,11 @@ const nsff=()=>{
         paye.textContent=minusrelief.toFixed(2)
         
         }
+    
+        const netAll=()=>{
+            nettotal=(incomePensioned.textContent)- (taxreleif.textContent) -(nhifOut.textContent)
+            console.log(nettotal)
+            netall= nettotal  + bonus.textContent
+            net.textContent=netall
+        }
+        
