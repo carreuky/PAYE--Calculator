@@ -74,7 +74,8 @@ height:25px;
 
     }
     .salary{
-        width: 300px;
+        width: 280px;
+        margin-left: 5px;
     }
     .output{
         width: auto;
@@ -85,6 +86,8 @@ height:25px;
     }
     #button{
         margin-left: 20px;
+        padding: 8px 50px;
+
     }
 } 
 
