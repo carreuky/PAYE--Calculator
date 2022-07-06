@@ -5,14 +5,29 @@ let bonus=document.getElementById('benefits')
 let kshbonus=document.getElementById('kshbonus')
 let nssfout=document.getElementById('nssfOut')
 let incomePensioned=document.getElementById('incomeAfterPension')
+let taxincome=document.getElementById('taxincome')
+let chargeable=document.getElementById('chargeable')
+let relief=document.getElementById('relief')
+let taxPayed=document.getElementById('taxPayed')
+let taxreleif=document.getElementById('taxreleif')
+let paye=document.getElementById('paye')
+let net =document.getElementById('net')
 
 button.addEventListener('click', ()=>{
+  
     totalIncome()
     nsff()
     incomeSubPension()
     nhif()
-    // income.textContent=parseFloat(salary.value)
+    incometax()
+    personalRelief()
+    taxonRelief()
+    income.textContent=parseInt(salary.value)
+    console.log(salary.value)
     bonus.textContent=parseFloat(kshbonus.value)
+    netAll()
+
+   
 })
 
 //having single selection for the buttons
@@ -21,7 +36,6 @@ function onlyOne(checkbox) {
     period.forEach((item) => {
         if (item !== checkbox) item.checked = false
     })
-    incometax()
 }
 function checknssf(checkbox) {
     let nssf= document.getElementsByName('nssf')
@@ -51,16 +65,15 @@ const nsff=()=>{
     if (newnssf.checked) {
         let nssf;
         if (salary.value > 18000) { 
-            nssfout.textContent=2160
+            nssfout.textContent=2160.00
         } else {
             nssf = parseInt(salary.value * 0.12);
-            nssfout.textContent=nssf
-            console.log(typeof(nssf))
+            nssfout.textContent=nssf.toFixed(2)
         }
         // nssfout.textContent=parseFloat(1080)
     }
     else if (oldnssf.checked) {
-        nssfout.textContent=parseInt(200)
+        nssfout.textContent=parseInt(200).toFixed(2)
     } 
     }else if(nonssf.checked){
         nssfout.textContent= 0.00
@@ -114,8 +127,7 @@ const nsff=()=>{
             } else {
                 nhif=0.00;
             }
-            nhifOut.textContent=nhif
-            console.log(nhif)
+            nhifOut.textContent=nhif.toFixed(2)
         }
         else if(nonhif.checked){
             nhifOut.textContent=0.00
@@ -124,8 +136,10 @@ const nsff=()=>{
 
     //display pensionedsalary
     const incomeSubPension=()=>{
-        let pensioned=parseInt(income.textContent-nssfout.textContent)
-        incomePensioned.textContent=pensioned
+        let pensioned=parseInt(salary.value-nssfout.textContent)
+        incomePensioned.textContent=pensioned.toFixed(2)
+        taxincome.textContent=pensioned.toFixed(2)
+        chargeable.textContent=pensioned.toFixed(2)
     }
 
     // benefits + salary
@@ -134,10 +148,21 @@ const nsff=()=>{
 
         let total;
         if (kshbonus.value !== '' && salary.value !== '') {
-            total = parseInt(salary.value) + parseInt(kshbonus.value);
             income.textContent = total;
         }else if (kshbonus.value === ''){
             total = parseInt(salary.value);
-            income.textContent =parseInt(total);
+            income.textContent =parseInt(total).toFixed(2);
         }
     }
+    //Personal relief
+    const personalRelief = ()=>{
+        if(month.checked){
+            relief.textContent=2400
+        }
+        else if(year.checked){
+            relief.textContent=28800
+        }
+    }
+    // income tax
+    month=document.getElementById('month')
+    year=document.getElementById('year')
