@@ -41,3 +41,28 @@ function checknhif(checkbox){
         if (item !== checkbox) item.checked = false
     })
 }
+//nssf
+const nsff=()=>{
+    let newnssf=document.getElementById('newnssf')
+    let oldnssf=document.getElementById('oldnssf')
+    let yesnssf=document.getElementById('yesnssf')
+    let nonssf=document.getElementById('nonssf')
+    if(yesnssf.checked){
+    if (newnssf.checked) {
+        let nssf;
+        if (salary.value > 18000) { 
+            nssfout.textContent=2160
+        } else {
+            nssf = parseInt(salary.value * 0.12);
+            nssfout.textContent=nssf
+            console.log(typeof(nssf))
+        }
+        // nssfout.textContent=parseFloat(1080)
+    }
+    else if (oldnssf.checked) {
+        nssfout.textContent=parseInt(200)
+    } 
+    }else if(nonssf.checked){
+        nssfout.textContent= 0.00
+    }
+    }
