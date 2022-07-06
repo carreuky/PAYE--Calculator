@@ -65,6 +65,32 @@ height:25px;
 
 }
 
+@media screen and (max-width: 720px){
+    .salary-output{
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 600px  400px;
+        margin-left: 50px;
+
+    }
+    .salary{
+        width: 300px;
+    }
+    .output{
+        width: auto;
+    }#ksh{
+        width: auto;
+    }.row{
+        grid-template-columns: auto;
+    }
+    #button{
+        margin-left: 20px;
+    }
+} 
+
+    
+
+
 
 
 
