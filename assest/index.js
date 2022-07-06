@@ -121,3 +121,9 @@ const nsff=()=>{
             nhifOut.textContent=0.00
         }
         }
+
+    //display pensionedsalary
+    const incomeSubPension=()=>{
+        let pensioned=parseInt(income.textContent-nssfout.textContent)
+        incomePensioned.textContent=pensioned
+    }
