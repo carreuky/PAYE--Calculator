@@ -166,3 +166,29 @@ const nsff=()=>{
     // income tax
     month=document.getElementById('month')
     year=document.getElementById('year')
+    const incometax =()=>{
+        total = salary.value
+        console.log(total)
+        salo=parseInt(total)
+        if(month.checked){
+            //what is the monthly payable
+            if (salo <= 12, 298) {
+                 taxed=salo * 0.1;
+                //  alert(taxed)
+            } else if (salo >= 12999 && salo <= 23885) {
+                 taxed=salo * 0.15;
+            } else if (salo >= 23886 && salo <= 35472) {
+                 taxed=salo * 0.2;
+            } else if (salo >= 35473 && salo <= 47059) {
+                 taxed=salo * 0.25;
+            } else if (salo > 47059) {
+                taxed=salo * 0.3;
+            }
+            return taxPayed.textContent=taxed.toFixed(2)
+        }
+    
+        // else if(year.checked){
+    
+        // }
+        
+    } 
