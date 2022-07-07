@@ -201,6 +201,6 @@ const nsff=()=>{
     
         const netAll=()=>{
             nettotal=parseFloat((incomePensioned.textContent)-(taxPayed.textContent) -(taxreleif.textContent) -(nhifOut.textContent) + parseInt(kshbonus.value))
-            net.textContent=nettotal
+            net.textContent=nettotal.toFixed(2)
         }
         
