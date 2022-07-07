@@ -200,9 +200,7 @@ const nsff=()=>{
         }
     
         const netAll=()=>{
-            nettotal=(incomePensioned.textContent)- (taxreleif.textContent) -(nhifOut.textContent)
-            console.log(nettotal)
-            netall= nettotal  + bonus.textContent
-            net.textContent=netall
+            nettotal=(incomePensioned.textContent)- (taxreleif.textContent) -(nhifOut.textContent) + parseInt(kshbonus.value)
+            net.textContent=nettotal
         }
         
