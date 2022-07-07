@@ -66,16 +66,18 @@ height:25px;
     .salary-output{
         display: flex;
         flex-direction: column;
-        grid-template-columns: 600px  400px;
-        margin-left: 50px;
+        grid-template-columns: 300px  300px;
+        margin-left: 4px;
+        margin-right: 4px;
 
     }
     .salary{
-        width: 280px;
-        margin-left: 5px;
+        width: 270px;
+        margin-left: 0px;
+        margin-right:0px;
     }
     .output{
-        width: auto;
+        width: 320px;
     }#ksh{
         width: auto;
     }.row{
@@ -84,7 +86,16 @@ height:25px;
     #button{
         margin-left: 20px;
         padding: 8px 50px;
+        margin-right:0px;
 
+    }
+    .row-output{
+        grid-template-columns: 150px auto ;
+        height: auto;
+        width: auto;
+    }
+    body{
+        margin-right: 0px;
     }
 } 
 
